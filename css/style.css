@@ -86,10 +86,14 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: inherit;
   text-decoration: none;
   margin-top: 10px;
   display: block;
+}
+
+.contact-link {
+  display: inline-block;
 }
 
 .welcome-message {
