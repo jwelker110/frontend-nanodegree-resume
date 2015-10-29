@@ -1,15 +1,15 @@
 var bio = {
-	"name": "Jonathan Welker",
+	"name": "John Doe",
 	"role": "Web Developer",
 	"contacts": {
-		"email": "jwelker110@gmail.com",
-		"github": "jwelker110",
-		"twitter": "_JonWelker",
-		"location": "Baton Rouge, LA"
+		"email": "johndoe@email.com",
+		"github": "example",
+		"twitter": "example",
+		"location": "Salt Lake City, UT"
 	},
-	"welcomeMessage": "I am a passionate web developer that enjoys a challenge!",
+	"welcomeMessage": "Welcome to my resume!",
 	"skills": [
-		"HTML", "CSS", "JavaScript", "Python", "Java"
+		"HTML", "CSS", "JavaScript", "Python"
 	],
 	"biopic": "images/me.jpg",
 	"display": new function(){}
@@ -155,10 +155,9 @@ education.display = function(){
 		for (c in school.onlineCourses) {
 			var course = school.onlineCourses[c];
 			$('.education-entry:last').append(
-				HTMLonlineTitle.replace("%data%", course.title) +
+				HTMLonlineTitle.replace("%data%", course.title).replace("%url%", course.url) +
 				HTMLonlineSchool.replace("%data%", course.school) +
-				HTMLonlineDates.replace("%data%", course.dates.start + course.dates.end) +
-				HTMLonlineURL.replace("%url%", course.url).replace("%data%", "View Online"));
+				HTMLonlineDates.replace("%data%", course.dates.start + course.dates.end));
 		}
 	}
 }
@@ -184,7 +183,7 @@ education.schools.push(
 		"< 2 years", 
 		["Software Development"], 
 		customDate("Feb 2014"),
-		"http://github.com/jwelker110",
+		"https://github.com/",
 		onlineCourses));
 
 
@@ -218,7 +217,7 @@ projects.array.push(
 		["A simple website that is generated using Python to read from a JSON file that contains movie details.",
 		"Movies are stored in a JSON file and the details are written into the HTML using a Python script"], 
 		[],
-		"http://jwelker110.github.io/p1-movie-trailer-website/"));
+		"https://github.com"));
 projects.array.push(
 	new project(
 		"Tournament Planner",
@@ -227,7 +226,7 @@ projects.array.push(
 		"The database utilizes views to simplify querying and Python is used to interact with the database.", 
 		"Test functions provide minimal feedback on the purpose of the implemented functions."],
 		[],
-		"https://github.com/jwelker110/p2-tournament-planner"));
+		"https://github.com"));
 
 
 // WORK SECTION
@@ -253,21 +252,22 @@ work.display = function(){
 }
 
 work.jobs.push(new job(
-	"ScalableWebDesign.net",
+	"This is the first job",
 	"Web Developer",
-	"Baton Rouge, LA",
+	"Boston, MA",
 	new customDate("August 2015", "Present"),
-	["Working as a team, my partner and I created the original concept for the website and implemented it's design using an iterative process.",
+	["The first thing I did", "The second thing I did", "The third thing I did",
 	],
-	"http://ScalableWebDesign.net"
+	"http://www.example.com"
 	));
 work.jobs.push(new job(
-	"ITT Technical Institute",
-	"Software Development Tutor",
-	"Baton Rouge, LA",
+	"This is the second job",
+	"Software Development",
+	"Los Angeles, CA",
 	new customDate("May 2014", "Present"),
-	["Explained in detail various programming concepts in easy-to-understand terms and assisted students with assignments and classwork.",
-	]
+	["This is the first responsibility", "This is the second responsibility", "This is the third responsibility",
+	],
+	"http://www.example.com"
 	));
 
 
@@ -277,8 +277,35 @@ work.display();
 projects.display();
 education.display();
 
+var contacts = $('.contact-link');
+
+
+
+
 // $('#main').append(internationalizeButton);
 
 $('#mapDiv').append(googleMap);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
