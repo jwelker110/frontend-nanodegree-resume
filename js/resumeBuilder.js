@@ -11,7 +11,7 @@ var bio = {
 	"skills": [
 		"HTML", "CSS", "JavaScript", "Python", "Java"
 	],
-	"biopic": "images/me.JPG",
+	"biopic": "images/me.jpg",
 	"display": new function(){}
 };
 bio.display = function(){
@@ -22,8 +22,8 @@ bio.display = function(){
 	formattedTwitter = HTMLtwitter.replace(/%data%/g, bio.contacts.twitter);
 	formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	formattedLocation = formattedLocation.replace("%url%", bio.contacts.location.replace(" ", "+"));
-	formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-	formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
+     formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+     formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
 
 	$('#header').prepend(formattedRole);
 	$('#header').prepend(formattedName);
@@ -38,7 +38,7 @@ bio.display = function(){
 	$('#header').append(HTMLskillsStart);
 
 	for(s in bio.skills){
-		$('#skills-h3').append(HTMLskills.replace("%data%", bio.skills[s]));
+		$('#skills').append(HTMLskills.replace("%data%", bio.skills[s]));
 	}
 
 	$('#footerContacts').append(formattedGithub);
