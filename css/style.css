@@ -18,6 +18,13 @@ h6 {
   overflow: auto;
 }
 
+#role {
+     color: white;
+}
+.section-title {
+     color: #888888;
+}
+
 .education-entry,
 .work-entry,
 .project-entry {
@@ -26,7 +33,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #FA743E;
   line-height: 48px;
   display: inline;
 }
@@ -103,17 +110,21 @@ a {
   line-height: 28px;
 }
 
+#skills {
+     flex-direction: column;
+}
+
 #skills-h3 {
-  color: #f5ae23;
+  color: #FA743E;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #FA743E;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #FA743E;
 }
 
 .white-text {
@@ -155,13 +166,13 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
   width: 200px;
   display: none;
 }
 
 img {
-  padding: 10px;
+  border: solid 3px #FA743E;
+  border-radius: 5px;
 }
 
 span {
